@@ -8,12 +8,24 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { App } from "./App";
+import { Presentation } from "./Presentation";
+import { Script } from "./Script";
 import "./index.css";
 
 const elem = document.getElementById("root")!;
+
+// Simple client-side routing
+const path = window.location.pathname;
+const getComponent = () => {
+  if (path === '/presentation') return <Presentation />;
+  if (path === '/script') return <Script />;
+  return <App />;
+};
+const component = getComponent();
+
 const app = (
   <StrictMode>
-    <App />
+    {component}
   </StrictMode>
 );
 
