@@ -34,6 +34,9 @@ const TitleSlide = () => (
     <div className="slide-meta">
       <p>Projeto DAC · Matemática A · 12.º Ano</p>
     </div>
+    <div className="slide-presenters">
+      <p>Bernardo Lopes, José Pinto, Weishang Lu</p>
+    </div>
   </div>
 );
 
